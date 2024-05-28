@@ -1,0 +1,28 @@
+@import './base/normalize';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(223,37,35,1) 0%, rgba(240,138,49,1) 100%);
+}
+
+.container {
+    width: 1060px;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 100%;
+        padding: 0 8px;
+    }
+}
+
+@import './blocks/header';
+@import './blocks/home-promo';
+@import './blocks/home-offer';
+@import './blocks/home-about';
+@import './blocks/home-faq';
+@import './blocks/footer';

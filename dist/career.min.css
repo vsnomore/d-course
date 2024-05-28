@@ -1,0 +1,144 @@
+*,
+::after,
+::before {
+  font-family: Gilroy,sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+ul {
+  padding-inline-start: 0;
+  list-style: none;
+  margin: 0
+}
+a {
+  text-decoration: none
+}
+html {
+  scroll-behavior: smooth
+}
+.container {
+  width: 1060px;
+  margin: 0 auto
+}
+.header {
+  background: #191a27
+}
+@media(max-width:992px) {
+  .container {
+    width: 100%;
+    padding: 0 8px
+  }
+}
+.header {
+  height: 90px;
+  display: flex;
+  align-items: center
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.header__logo {
+  display: block;
+  width: 201px
+}
+.header__logo img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.header__navigation .menu {
+  display: flex;
+  align-items: center;
+  gap: 24px
+}
+.header__navigation .menu li .menu__link {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff
+}
+.header__navigation .menu li .menu__link:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none
+}
+.hamburger {
+  display: none
+}
+.vacancy {
+  padding: 80px 0
+}
+.vacancy__subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #191a27
+}
+.vacancy__title {
+  margin-top: 24px;
+  font-weight: 800;
+  font-size: 32px;
+  text-align: center;
+  color: #191a27
+}
+.vacancy__grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(246px,auto);
+  gap: 24px
+}
+.vacancy__grid-item {
+  padding: 24px;
+  background: linear-gradient(45deg,#df2523 0,#f08a31 100%);
+  border-radius: 8px
+}
+.vacancy__grid-item-title {
+  font-weight: 600;
+  font-size: 32px;
+  color: #fff
+}
+.vacancy__grid-item-text {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff
+}
+.vacancy__grid-item-button {
+  margin-top: 16px;
+  display: block;
+  border-radius: 8px;
+  padding: 20px 16px;
+  width: 158px;
+  background: #191a27;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff
+}
+.footer {
+  background: #191a27;
+  padding: 80px 0
+}
+.footer__divider {
+  margin: 0 auto;
+  width: 106px;
+  height: 2px;
+  background: linear-gradient(45deg,#df2523 0,#f08a31 100%)
+}
+.footer__menu {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 32px
+}
+.footer__menu-link {
+  font-weight: 600;
+  font-size: 18px;
+  color: #faf1f1
+}
