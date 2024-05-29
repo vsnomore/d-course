@@ -13,13 +13,54 @@ html {
     background: #191a27;
 }
 
+@import './blocks/header';
+@import './blocks/education-lessons';
+@import './blocks/footer';
+
+@media (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
+
 @media (max-width: 992px) {
     .container {
         width: 100%;
         padding: 0 8px;
     }
+
+    .lessons__grid-item-name {
+        font-size: 20px;
+    }
 }
 
-@import './blocks/header';
-@import './blocks/education-lessons';
-@import './blocks/footer';
+@media (max-width: 608px) {
+    .lessons {
+        padding: 32px 0;
+    }
+
+    .lessons__title {
+        font-size: 20px;
+    }
+
+    .lessons__subtitle {
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+    .lessons__grid {
+        margin-top: 16px;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .lessons__grid-item {
+        padding: 8px;
+    }
+
+    .lessons__button {
+        width: 100%;
+        margin-top: 16px;
+        font-size: 18px;
+    }
+}

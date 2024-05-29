@@ -24,12 +24,6 @@ html {
 .header {
   background: #191a27
 }
-@media(max-width:992px) {
-  .container {
-    width: 100%;
-    padding: 0 8px
-  }
-}
 .header {
   height: 90px;
   display: flex;
@@ -68,7 +62,94 @@ html {
   text-decoration-skip-ink: none
 }
 .hamburger {
+  position: relative;
+  height: 76px;
+  background: #191a27;
   display: none
+}
+.hamburger > a {
+  display: flex
+}
+.hamburger__logo img {
+  width: 199px
+}
+.hamburger__icon {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  height: 60px;
+  width: 60px;
+  padding: 15px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 71;
+  opacity: 1;
+  transition: .7s
+}
+.hamburger__icon span {
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transition: .4s
+}
+.hamburger__icon-active {
+  transform: none
+}
+.hamburger__icon-active span:nth-child(1) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 12.6px
+}
+.hamburger__icon-active span:nth-child(2) {
+  display: none
+}
+.hamburger__icon-active span:nth-child(3) {
+  transform: rotate(45deg);
+  position: relative;
+  top: -12.6px
+}
+@media(max-width:992px) {
+  .header {
+    padding: 100px 16px 16px 16px;
+    position: fixed;
+    background: #191a27;
+    width: 100%;
+    height: 100vh;
+    z-index: 70;
+    left: -100%;
+    transition: all .6s;
+    align-items: flex-start
+  }
+  .header__active {
+    left: 0
+  }
+  .header__wrapper {
+    margin: 0 auto;
+    width: 208px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px
+  }
+  .header__logo {
+    width: 150px
+  }
+  .menu {
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px
+  }
+  .menu__link {
+    font-size: 16px;
+    line-height: 19px
+  }
+  .hamburger {
+    display: flex;
+    align-items: center
+  }
 }
 .vacancy {
   padding: 80px 0
@@ -141,4 +222,59 @@ html {
   font-weight: 600;
   font-size: 18px;
   color: #faf1f1
+}
+@media(max-width:768px) {
+  .footer {
+    padding: 32px 0
+  }
+  .footer__menu {
+    margin-top: 16px;
+    gap: 16px
+  }
+}
+@media(max-width:1200px) {
+  .container {
+    width: 960px
+  }
+}
+@media(max-width:992px) {
+  .container {
+    width: 100%;
+    padding: 0 8px
+  }
+}
+@media(max-width:768px) {
+  .vacancy {
+    padding: 32px 0
+  }
+  .vacancy__title {
+    margin-top: 16px;
+    font-size: 20px
+  }
+  .vacancy__grid {
+    margin-top: 16px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(200px,auto);
+    gap: 16px
+  }
+  .vacancy__grid-item-title {
+    font-size: 20px
+  }
+  .vacancy__grid-item-button {
+    font-size: 16px
+  }
+}
+@media(max-width:496px) {
+  .vacancy__grid-item {
+    padding: 8px
+  }
+  .vacancy__grid-item-button {
+    width: 100%
+  }
+  .vacancy__subtitle {
+    text-align: left
+  }
+  .vacancy__title {
+    text-align: left
+  }
 }

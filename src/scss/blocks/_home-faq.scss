@@ -7,4 +7,101 @@
         font-size: 32px;
         color: #191a27;
     }
+
+    &__list {
+
+        &-item {
+            margin: 32px 0;
+            border: 1px solid #191a27;
+            border-radius: 8px;     
+
+            &-title {
+                height: 80px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            &-number {
+                width: 108px;
+                font-weight: 400;
+                font-size: 24px;
+                text-align: center;
+                color: #191a27;
+                flex-shrink: 0;
+
+            }
+
+            &-question {
+                padding-right: 8px;
+                font-weight: 400;
+                font-size: 24px;
+                color: #191a27;
+            }
+
+            &-icon {
+                margin-left: auto;
+                border-bottom-right-radius: 8px;
+                border-top-right-radius: 8px;
+                z-index: 0;
+                width: 86px;
+                height: 100%;
+                backdrop-filter: blur(15px);
+                background: #191a27;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+
+                span {
+                    width: 22px;
+                    height: 2px;
+                    border-radius: 8px;
+                    background-color: #fff;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 2px;
+                        height: 22px;
+                        border-radius: 8px;
+                        background-color: #fff;
+                        top: -10px;
+                        left: 10px;
+                    }
+                }
+            }
+
+            &-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: .7s;
+
+                &-text {
+                    padding: 16px 8px 64px 108px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 180%;
+                    color: #191a27;
+                }
+            }
+        }
+    }
+}
+
+.faq__list>*.active {
+    border-color: #f08a31;
+}
+
+.faq__list-item-title.active {
+    .faq__list-item-icon {
+        background: linear-gradient(45deg, #df2523 0%, #f08a31 100%);
+        border-bottom-right-radius: 0;
+
+        span:before {
+            display: none;
+        }
+    }
 }

@@ -24,12 +24,6 @@ body {
   width: 1060px;
   margin: 0 auto
 }
-@media(max-width:992px) {
-  .container {
-    width: 100%;
-    padding: 0 8px
-  }
-}
 .header {
   height: 90px;
   display: flex;
@@ -68,7 +62,94 @@ body {
   text-decoration-skip-ink: none
 }
 .hamburger {
+  position: relative;
+  height: 76px;
+  background: #191a27;
   display: none
+}
+.hamburger > a {
+  display: flex
+}
+.hamburger__logo img {
+  width: 199px
+}
+.hamburger__icon {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  height: 60px;
+  width: 60px;
+  padding: 15px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 71;
+  opacity: 1;
+  transition: .7s
+}
+.hamburger__icon span {
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transition: .4s
+}
+.hamburger__icon-active {
+  transform: none
+}
+.hamburger__icon-active span:nth-child(1) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 12.6px
+}
+.hamburger__icon-active span:nth-child(2) {
+  display: none
+}
+.hamburger__icon-active span:nth-child(3) {
+  transform: rotate(45deg);
+  position: relative;
+  top: -12.6px
+}
+@media(max-width:992px) {
+  .header {
+    padding: 100px 16px 16px 16px;
+    position: fixed;
+    background: #191a27;
+    width: 100%;
+    height: 100vh;
+    z-index: 70;
+    left: -100%;
+    transition: all .6s;
+    align-items: flex-start
+  }
+  .header__active {
+    left: 0
+  }
+  .header__wrapper {
+    margin: 0 auto;
+    width: 208px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px
+  }
+  .header__logo {
+    width: 150px
+  }
+  .menu {
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px
+  }
+  .menu__link {
+    font-size: 16px;
+    line-height: 19px
+  }
+  .hamburger {
+    display: flex;
+    align-items: center
+  }
 }
 .promo {
   padding: 64px 0 96px 0;
@@ -119,6 +200,7 @@ body {
   margin-top: 8px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 8px
 }
 .promo__crumbs-item {
@@ -234,6 +316,86 @@ body {
   font-size: 32px;
   color: #191a27
 }
+.faq__list-item {
+  margin: 32px 0;
+  border: 1px solid #191a27;
+  border-radius: 8px
+}
+.faq__list-item-title {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer
+}
+.faq__list-item-number {
+  width: 108px;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #191a27;
+  flex-shrink: 0
+}
+.faq__list-item-question {
+  padding-right: 8px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #191a27
+}
+.faq__list-item-icon {
+  margin-left: auto;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 0;
+  width: 86px;
+  height: 100%;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: #191a27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0
+}
+.faq__list-item-icon span {
+  width: 22px;
+  height: 2px;
+  border-radius: 8px;
+  background-color: #fff;
+  position: relative
+}
+.faq__list-item-icon span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  border-radius: 8px;
+  background-color: #fff;
+  top: -10px;
+  left: 10px
+}
+.faq__list-item-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: .7s
+}
+.faq__list-item-content-text {
+  padding: 16px 8px 64px 108px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+  color: #191a27
+}
+.faq__list > .active {
+  border-color: #f08a31
+}
+.faq__list-item-title.active .faq__list-item-icon {
+  background: linear-gradient(45deg,#df2523 0,#f08a31 100%);
+  border-bottom-right-radius: 0
+}
+.faq__list-item-title.active .faq__list-item-icon span:before {
+  display: none
+}
 .footer {
   background: #191a27;
   padding: 80px 0
@@ -254,4 +416,153 @@ body {
   font-weight: 600;
   font-size: 18px;
   color: #faf1f1
+}
+@media(max-width:768px) {
+  .footer {
+    padding: 32px 0
+  }
+  .footer__menu {
+    margin-top: 16px;
+    gap: 16px
+  }
+}
+@media(max-width:1200px) {
+  .container {
+    width: 960px
+  }
+}
+@media(max-width:992px) {
+  .container {
+    width: 100%;
+    padding: 0 8px
+  }
+  .offer__wrapper {
+    flex-direction: column-reverse;
+    gap: 24px
+  }
+  .offer__video {
+    justify-content: center
+  }
+  .offer__video video {
+    width: 100%
+  }
+}
+@media(max-width:768px) {
+  .promo .container:after,
+  .promo .container:before {
+    display: none
+  }
+  .promo {
+    padding: 32px 0 48px 0
+  }
+  .promo__title {
+    font-size: 22px;
+    text-align: left
+  }
+  .promo__subtitle {
+    margin-top: 16px;
+    font-size: 18px;
+    text-align: left
+  }
+  .promo__text {
+    margin-top: 16px;
+    font-size: 16px;
+    text-align: left
+  }
+  .promo__crumbs {
+    justify-content: flex-start
+  }
+  .promo__crumbs-item {
+    font-size: 16px;
+    padding: 3px 4px
+  }
+  .promo__button {
+    margin: 0;
+    margin-top: 16px;
+    font-size: 16px
+  }
+  .offer {
+    padding: 32px 0 24px 0
+  }
+  .offer__title {
+    font-size: 20px
+  }
+  .offer__list {
+    margin-top: 8px
+  }
+  .offer__list-item {
+    height: 42px;
+    margin-top: 8px
+  }
+  .offer__list-item span {
+    font-size: 16px
+  }
+  .offer__button {
+    margin-top: 16px;
+    font-size: 16px
+  }
+  .about {
+    padding: 24px 0
+  }
+  .about__title {
+    font-size: 20px
+  }
+  .about__grid {
+    grid-template-columns: 1fr
+  }
+  .about__grid-item {
+    min-height: 180px;
+    padding: 8px
+  }
+  .about__grid-item-title {
+    font-size: 20px
+  }
+  .about__grid-item-text {
+    margin-top: 8px;
+    font-size: 16px
+  }
+  .faq {
+    padding: 24px 0
+  }
+  .faq__title {
+    font-size: 20px
+  }
+  .faq__list-item {
+    margin: 8px 0
+  }
+  .faq__list-item-title {
+    height: 50px
+  }
+  .faq__list-item-number {
+    width: 36px;
+    font-size: 16px;
+    text-align: center
+  }
+  .faq__list-item-question {
+    font-size: 16px
+  }
+  .faq__list-item-icon {
+    width: 30px
+  }
+  .faq__list-item-icon span {
+    width: 14px
+  }
+  .faq__list-item-icon span:before {
+    height: 14px;
+    top: -6px;
+    left: 6px
+  }
+  .faq__list-item-content-text {
+    padding: 8px 8px 16px 36px;
+    font-size: 16px;
+    line-height: 120%
+  }
+}
+@media(max-width:450px) {
+  .promo__button {
+    width: 100%
+  }
+  .offer__button {
+    width: 100%
+  }
 }

@@ -13,6 +13,16 @@ html {
     background: #191a27;
 }
 
+@import './blocks/header';
+@import './blocks/career-vacancy';
+@import './blocks/footer';
+
+@media (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
+
 @media (max-width: 992px) {
     .container {
         width: 100%;
@@ -20,6 +30,46 @@ html {
     }
 }
 
-@import './blocks/header';
-@import './blocks/career-vacancy';
-@import './blocks/footer';
+@media (max-width: 768px) {
+    .vacancy {
+        padding: 32px 0;
+    }
+
+    .vacancy__title {
+        margin-top: 16px;
+        font-size: 20px;
+    }
+
+    .vacancy__grid {
+        margin-top: 16px;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(200px, auto);
+        gap: 16px;
+    }
+
+    .vacancy__grid-item-title {
+        font-size: 20px;
+    }
+
+    .vacancy__grid-item-button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 496px) {
+    .vacancy__grid-item {
+        padding: 8px;
+    }
+
+    .vacancy__grid-item-button {
+        width: 100%;
+    }
+
+    .vacancy__subtitle {
+        text-align: left;
+    }
+
+    .vacancy__title {
+        text-align: left;
+    }
+}

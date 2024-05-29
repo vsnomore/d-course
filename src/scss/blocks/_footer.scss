@@ -22,3 +22,14 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 32px 0;;
+    }
+
+    .footer__menu {
+        margin-top: 16px;
+        gap: 16px;
+    }
+}
