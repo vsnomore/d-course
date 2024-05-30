@@ -14,8 +14,51 @@ ul {
 a {
   text-decoration: none
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+.anim__shift-left {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-left.animation_done {
+  transform: translateX(0);
+  opacity: 1
+}
+@media(max-width:768px) {
+  .anim__shift-left {
+    transform: translateX(-80px)
+  }
+}
+.anim__shift-right {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-right.animation_done {
+  transform: translateX(0);
+  opacity: 1
+}
+.anim__shift-bottom {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-bottom.animation_done {
+  transform: translateY(0);
+  opacity: 1
+}
 html {
   scroll-behavior: smooth
+}
+body {
+  overflow-x: hidden
 }
 .container {
   width: 1060px;
@@ -32,7 +75,8 @@ html {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  animation: fadeIn 2s ease
 }
 .header__logo {
   display: block;
@@ -65,7 +109,8 @@ html {
   position: relative;
   height: 76px;
   background: #191a27;
-  display: none
+  display: none;
+  animation: fadeIn 2s ease
 }
 .hamburger > a {
   display: flex
@@ -195,12 +240,18 @@ html {
   display: block;
   border-radius: 8px;
   padding: 20px 16px;
-  width: 158px;
+  width: 160px;
   background: #191a27;
+  border: 1px solid #191a27;
   text-align: center;
   font-weight: 600;
   font-size: 18px;
-  color: #fff
+  color: #fff;
+  transition: .3s
+}
+.vacancy__grid-item-button:hover {
+  background: rgba(0,0,0,0);
+  border-color: #fff
 }
 .footer {
   background: #191a27;

@@ -14,11 +14,52 @@ ul {
 a {
   text-decoration: none
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+.anim__shift-left {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-left.animation_done {
+  transform: translateX(0);
+  opacity: 1
+}
+@media(max-width:768px) {
+  .anim__shift-left {
+    transform: translateX(-80px)
+  }
+}
+.anim__shift-right {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-right.animation_done {
+  transform: translateX(0);
+  opacity: 1
+}
+.anim__shift-bottom {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-bottom.animation_done {
+  transform: translateY(0);
+  opacity: 1
+}
 html {
   scroll-behavior: smooth
 }
 body {
-  background: linear-gradient(90deg,#df2523 0,#f08a31 100%)
+  background: linear-gradient(90deg,#df2523 0,#f08a31 100%);
+  overflow-x: hidden
 }
 .container {
   width: 1060px;
@@ -32,7 +73,8 @@ body {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  animation: fadeIn 2s ease
 }
 .header__logo {
   display: block;
@@ -65,7 +107,8 @@ body {
   position: relative;
   height: 76px;
   background: #191a27;
-  display: none
+  display: none;
+  animation: fadeIn 2s ease
 }
 .hamburger > a {
   display: flex
@@ -156,7 +199,8 @@ body {
   overflow: hidden
 }
 .promo .container {
-  position: relative
+  position: relative;
+  animation: fadeIn 2s ease
 }
 .promo .container:before {
   content: "";
@@ -213,16 +257,22 @@ body {
 }
 .promo__button {
   display: block;
-  width: 231px;
+  width: 232px;
   margin: 0 auto;
   margin-top: 32px;
   background: #191a27;
   border-radius: 8px;
+  border: 1px solid #191a27;
   padding: 16px 32px;
   font-weight: 500;
   font-size: 24px;
   text-align: center;
-  color: #fff
+  color: #fff;
+  transition: .3s
+}
+.promo__button:hover {
+  background: rgba(0,0,0,0);
+  color: #191a27
 }
 .offer {
   background: #fff;
@@ -267,7 +317,11 @@ body {
   font-weight: 600;
   font-size: 18px;
   text-align: center;
-  color: #fff
+  color: #fff;
+  transition: .3s
+}
+.offer__button:hover {
+  background: linear-gradient(90deg,#df2523 0,#f08a31 92%)
 }
 .offer__video {
   display: flex;
@@ -354,7 +408,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0
+  flex-shrink: 0;
+  transition: .3s
 }
 .faq__list-item-icon span {
   width: 22px;
@@ -385,6 +440,12 @@ body {
   font-size: 20px;
   line-height: 180%;
   color: #191a27
+}
+.faq__list-item:hover {
+  border-color: #f08a31
+}
+.faq__list-item-title:hover .faq__list-item-icon {
+  background: linear-gradient(45deg,#df2523 0,#f08a31 100%)
 }
 .faq__list > .active {
   border-color: #f08a31

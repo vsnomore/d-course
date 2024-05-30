@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // animation();
-    // gridAnimation();
-
+    animation();
 
     // mob menu
     const mobMenu = document.querySelector('.header');
@@ -60,39 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// function animation() {
-//     const animatedItems = document.querySelectorAll('[data-js="animated-item"]');
-//     function onEntry(entry) {
-//         entry.forEach(change => {
-//             if (change.isIntersecting) {
-//                 change.target.classList.add('animation_done');
-//             }
-//         });
-//     }
+function animation() {
+    const animatedItems = document.querySelectorAll('[data-js="animated-item"]');
+    function onEntry(entry) {
+        entry.forEach(change => {
+            if (change.isIntersecting) {
+                change.target.classList.add('animation_done');
+            }
+        });
+    }
 
-//     let options = { threshold: [0.4] };
-//     let observer = new IntersectionObserver(onEntry, options);
+    let options = { threshold: [0.4] };
+    let observer = new IntersectionObserver(onEntry, options);
 
-//     animatedItems.forEach(el => {
-//         observer.observe(el);
-//     });
-// }
-
-// function gridAnimation() {
-//     const animatedItem = document.querySelector('[data-js="grid-animation"]');
-//     function onEntry(entry) {
-//         entry.forEach(change => {
-//             if (change.isIntersecting) {
-//                 setTimeout(() => {
-//                     change.target.classList.add('grid-animation_done');
-//                 }, 400)
-//             }
-//         });
-//     }
-
-//     let options = { threshold: [0.5] };
-//     let observer = new IntersectionObserver(onEntry, options);
-
-//     observer.observe(animatedItem);
-// }
+    animatedItems.forEach(el => {
+        observer.observe(el);
+    });
+}
 

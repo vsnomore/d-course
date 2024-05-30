@@ -76,6 +76,12 @@
                 justify-content: center;
                 align-items: center;
                 gap: 24px;
+                transition: .3s;
+
+                &:hover {
+                    background: #191a27;
+                    border-color: #191a27;
+                }
 
                 span {
                     display: block;
@@ -98,11 +104,18 @@
         margin-top: 32px;
         border-radius: 8px;
         padding: 16px 32px;
-        width: 266px;
+        width: 268px;
+        border: 1px solid #191a27;
         background: #191a27;
         font-weight: 500;
         font-size: 24px;
         text-align: center;
         color: #fff;
+        transition: .3s;
+
+        &:hover {
+            background: transparent;
+            color: #191a27;
+        }
     }
 }

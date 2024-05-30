@@ -1,7 +1,12 @@
 @import './base/normalize';
+@import './base/animation';
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .container {

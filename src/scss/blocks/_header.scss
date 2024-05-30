@@ -7,6 +7,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        animation: fadeIn 2s ease;
     }
 
     &__logo {
@@ -53,6 +54,7 @@
     height: 76px;
     background: #191a27;
     display: none;
+    animation: fadeIn 2s ease;
 
     &>a {
         display: flex;

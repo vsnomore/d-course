@@ -1,4 +1,5 @@
 @import './base/normalize';
+@import './base/animation';
 
 html {
     scroll-behavior: smooth;
@@ -6,6 +7,7 @@ html {
 
 body {
     background: linear-gradient(90deg, rgba(223, 37, 35, 1) 0%, rgba(240, 138, 49, 1) 100%);
+    overflow-x: hidden;
 }
 
 .container {

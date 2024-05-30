@@ -14,8 +14,51 @@ ul {
 a {
   text-decoration: none
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+.anim__shift-left {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-left.animation_done {
+  transform: translateX(0);
+  opacity: 1
+}
+@media(max-width:768px) {
+  .anim__shift-left {
+    transform: translateX(-80px)
+  }
+}
+.anim__shift-right {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-right.animation_done {
+  transform: translateX(0);
+  opacity: 1
+}
+.anim__shift-bottom {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s
+}
+.anim__shift-bottom.animation_done {
+  transform: translateY(0);
+  opacity: 1
+}
 html {
   scroll-behavior: smooth
+}
+body {
+  overflow-x: hidden
 }
 .container {
   width: 1060px;
@@ -32,7 +75,8 @@ html {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  animation: fadeIn 2s ease
 }
 .header__logo {
   display: block;
@@ -65,7 +109,8 @@ html {
   position: relative;
   height: 76px;
   background: #191a27;
-  display: none
+  display: none;
+  animation: fadeIn 2s ease
 }
 .hamburger > a {
   display: flex
@@ -219,7 +264,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px
+  gap: 24px;
+  transition: .3s
+}
+.lessons__grid-item-button:hover {
+  background: #191a27;
+  border-color: #191a27
 }
 .lessons__grid-item-button span {
   display: block;
@@ -237,12 +287,18 @@ html {
   margin-top: 32px;
   border-radius: 8px;
   padding: 16px 32px;
-  width: 266px;
+  width: 268px;
+  border: 1px solid #191a27;
   background: #191a27;
   font-weight: 500;
   font-size: 24px;
   text-align: center;
-  color: #fff
+  color: #fff;
+  transition: .3s
+}
+.lessons__button:hover {
+  background: rgba(0,0,0,0);
+  color: #191a27
 }
 .footer {
   background: #191a27;

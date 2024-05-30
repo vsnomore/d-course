@@ -48,6 +48,11 @@
         font-size: 18px;
         text-align: center;
         color: #fff;
+        transition: .3s;
+
+        &:hover {
+            background: linear-gradient(90deg, rgba(223,37,35,1) 0%, rgba(240,138,49,1) 92%);
+        }
     }
 
     &__video {
