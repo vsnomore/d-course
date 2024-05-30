@@ -68,7 +68,7 @@ function animation() {
         });
     }
 
-    let options = { threshold: [0.4] };
+    let options = { threshold: [0.2] };
     let observer = new IntersectionObserver(onEntry, options);
 
     animatedItems.forEach(el => {

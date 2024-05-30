@@ -13,7 +13,9 @@
         &-item {
             margin: 32px 0;
             border: 1px solid #191a27;
-            border-radius: 8px;     
+            border-radius: 8px;
+            border-top-right-radius: 12px;  
+            border-bottom-right-radius: 12px;  
 
             &-title {
                 height: 80px;
@@ -92,13 +94,13 @@
     }
 }
 
-.faq__list-item:hover {
-    border-color: #f08a31;
-}
+// .faq__list-item:hover {
+//     border-color: #f08a31;
+// }
 
-.faq__list-item-title:hover .faq__list-item-icon {
-    background: linear-gradient(45deg, #df2523 0%, #f08a31 100%);
-}
+// .faq__list-item-title:hover .faq__list-item-icon {
+//     background: linear-gradient(45deg, #df2523 0%, #f08a31 100%);
+// }
 
 .faq__list>*.active {
     border-color: #f08a31;

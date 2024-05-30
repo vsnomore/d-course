@@ -55,7 +55,8 @@ a {
   opacity: 1
 }
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  overflow-x: hidden
 }
 body {
   background: linear-gradient(90deg,#df2523 0,#f08a31 100%);
@@ -200,7 +201,8 @@ body {
 }
 .promo .container {
   position: relative;
-  animation: fadeIn 2s ease
+  animation: fadeIn 2s ease;
+  overflow-x: visible
 }
 .promo .container:before {
   content: "";
@@ -257,7 +259,7 @@ body {
 }
 .promo__button {
   display: block;
-  width: 232px;
+  width: 233px;
   margin: 0 auto;
   margin-top: 32px;
   background: #191a27;
@@ -373,7 +375,9 @@ body {
 .faq__list-item {
   margin: 32px 0;
   border: 1px solid #191a27;
-  border-radius: 8px
+  border-radius: 8px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px
 }
 .faq__list-item-title {
   height: 80px;
@@ -440,12 +444,6 @@ body {
   font-size: 20px;
   line-height: 180%;
   color: #191a27
-}
-.faq__list-item:hover {
-  border-color: #f08a31
-}
-.faq__list-item-title:hover .faq__list-item-icon {
-  background: linear-gradient(45deg,#df2523 0,#f08a31 100%)
 }
 .faq__list > .active {
   border-color: #f08a31

@@ -5,6 +5,7 @@
     .container {
         position: relative;
         animation: fadeIn 2s ease;
+        overflow-x: visible;
 
         &:before {
             content: "";
@@ -69,7 +70,7 @@
 
     &__button {
         display: block;
-        width: 232px;
+        width: 233px;
         margin: 0 auto;
         margin-top: 32px;
         background: #191A27;
