@@ -381,6 +381,7 @@ body {
 }
 .faq__list-item-title {
   height: 80px;
+  padding: 8px 8px 8px 0;
   display: flex;
   align-items: center;
   cursor: pointer
@@ -401,10 +402,8 @@ body {
 }
 .faq__list-item-icon {
   margin-left: auto;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-  z-index: 0;
-  width: 86px;
+  border-radius: 8px;
+  width: 64px;
   height: 100%;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
@@ -449,8 +448,7 @@ body {
   border-color: #f08a31
 }
 .faq__list-item-title.active .faq__list-item-icon {
-  background: linear-gradient(45deg,#df2523 0,#f08a31 100%);
-  border-bottom-right-radius: 0
+  background: linear-gradient(45deg,#df2523 0,#f08a31 100%)
 }
 .faq__list-item-title.active .faq__list-item-icon span:before {
   display: none
@@ -601,7 +599,7 @@ body {
     font-size: 16px
   }
   .faq__list-item-icon {
-    width: 30px
+    width: 34px
   }
   .faq__list-item-icon span {
     width: 14px

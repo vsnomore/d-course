@@ -19,6 +19,7 @@
 
             &-title {
                 height: 80px;
+                padding: 8px 8px 8px 0;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
@@ -43,10 +44,8 @@
 
             &-icon {
                 margin-left: auto;
-                border-bottom-right-radius: 8px;
-                border-top-right-radius: 8px;
-                z-index: 0;
-                width: 86px;
+                border-radius: 8px;
+                width: 64px;
                 height: 100%;
                 backdrop-filter: blur(15px);
                 background: #191a27;
@@ -94,14 +93,6 @@
     }
 }
 
-// .faq__list-item:hover {
-//     border-color: #f08a31;
-// }
-
-// .faq__list-item-title:hover .faq__list-item-icon {
-//     background: linear-gradient(45deg, #df2523 0%, #f08a31 100%);
-// }
-
 .faq__list>*.active {
     border-color: #f08a31;
 }
@@ -109,7 +100,6 @@
 .faq__list-item-title.active {
     .faq__list-item-icon {
         background: linear-gradient(45deg, #df2523 0%, #f08a31 100%);
-        border-bottom-right-radius: 0;
 
         span:before {
             display: none;
