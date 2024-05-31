@@ -45,6 +45,11 @@ a {
   transform: translateX(0);
   opacity: 1
 }
+@media(max-width:768px) {
+  .anim__shift-right {
+    transform: translateX(80px)
+  }
+}
 .anim__shift-bottom {
   transform: translateY(150px);
   opacity: 0;
@@ -53,6 +58,11 @@ a {
 .anim__shift-bottom.animation_done {
   transform: translateY(0);
   opacity: 1
+}
+@media(max-width:768px) {
+  .anim__shift-bottom {
+    transform: translateY(80px)
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -298,7 +308,6 @@ body {
   margin-top: 20px
 }
 .offer__list-item {
-  height: 52px;
   margin-top: 8px;
   display: flex;
   align-items: center;
@@ -444,6 +453,16 @@ body {
   line-height: 180%;
   color: #191a27
 }
+@media(min-width:768px) {
+  .faq__list-item-title:hover .faq__list-item-icon {
+    background: linear-gradient(45deg,#df2523 0,#f08a31 100%)
+  }
+}
+@media(min-width:768px) {
+  .faq__list-item:hover {
+    border-color: #f08a31
+  }
+}
 .faq__list > .active {
   border-color: #f08a31
 }
@@ -473,6 +492,13 @@ body {
   font-weight: 600;
   font-size: 18px;
   color: #faf1f1
+}
+.footer__menu-link:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none
 }
 @media(max-width:768px) {
   .footer {
@@ -548,7 +574,6 @@ body {
     margin-top: 8px
   }
   .offer__list-item {
-    height: 42px;
     margin-top: 8px
   }
   .offer__list-item span {

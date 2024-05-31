@@ -45,6 +45,11 @@ a {
   transform: translateX(0);
   opacity: 1
 }
+@media(max-width:768px) {
+  .anim__shift-right {
+    transform: translateX(80px)
+  }
+}
 .anim__shift-bottom {
   transform: translateY(150px);
   opacity: 0;
@@ -53,6 +58,11 @@ a {
 .anim__shift-bottom.animation_done {
   transform: translateY(0);
   opacity: 1
+}
+@media(max-width:768px) {
+  .anim__shift-bottom {
+    transform: translateY(80px)
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -274,6 +284,13 @@ body {
   font-weight: 600;
   font-size: 18px;
   color: #faf1f1
+}
+.footer__menu-link:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none
 }
 @media(max-width:768px) {
   .footer {

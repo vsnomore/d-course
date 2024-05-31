@@ -19,6 +19,13 @@
             font-weight: 600;
             font-size: 18px;
             color: #faf1f1;
+
+            &:hover {
+                color: #fff;
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                text-decoration-skip-ink: none;
+            }
         }
     }
 }
